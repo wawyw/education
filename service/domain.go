@@ -48,7 +48,7 @@ func regitserEvent(client *channel.Client, chaincodeID, eventID string) (fab.Reg
 
 	reg, notifier, err := client.RegisterChaincodeEvent(chaincodeID, eventID)
 	if err != nil {
-		fmt.Println("注册链码事件失败: %s", err)
+		fmt.Printf("注册链码事件失败: %s", err)
 	}
 	return reg, notifier
 }
@@ -72,7 +72,7 @@ func InitService(chaincodeID, channelID string, org *sdkInit.OrgInfo, sdk *fabsd
 	// Channel client is used to query and execute transactions (Org1 is default org)
 	client, err := channel.New(clientChannelContext)
 	if err != nil {
-		return nil, fmt.Errorf("Failed to create new channel client: %s", err)
+		return nil, fmt.Errorf("failed to create new channel client: %s", err)
 	}
 	handler.Client = client
 	return handler, nil
