@@ -1,0 +1,19 @@
+# 排序节点的组织定义
+OrdererOrgs:
+  - Name: Orderer # 名称
+    Domain: example.com # 域名
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: orderer # 主机名
+
+# peer节点的组织定义
+PeerOrgs:
+  # Org1组织
+  - Name: Org1 # 名称
+    Domain: org1.example.com # 域名
+    EnableNodeOUs: true
+    Template:
+      Count: 2 # 节点个数：peer0.org1.example.com、peer1.org1.example.com
+    Users: # 组织的用户信息。Count 指该组织中除了 Admin 之外的用户的个数
+      Count: 1 # 用户：Admin 和 User1
+

@@ -1,0 +1,38 @@
+form{
+    margin:0;
+    padding:0;
+    display: block;
+}
+
+tr {
+    height: 60px;
+    line-height: 40px;
+}
+
+th {
+    text-align: right;
+    padding-right: 10px;
+    width: 150px;
+    font-weight: 400;
+}
+
+.required {
+    color: #e85759;
+    padding: 0 4px;
+    vertical-align: inherit;
+}
+
+.reg{
+    padding-left: 150px;
+}
+
+.lo{
+    float: right;
+    padding-right: 83px;
+}
+
+#tishi {
+    float:left;
+    padding-left: 255px;
+    font-size: 13px;
+}
