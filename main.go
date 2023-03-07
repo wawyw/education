@@ -74,7 +74,7 @@ func main() {
 		EnrollDate: "2018年9月",
 		GraduationDate: "2022年7月",
 		SchoolName: "西安邮电大学",
-		Major: "网络空间安全",
+		Major: "信息安全",
 		QuaType: "普通",
 		Length: "四年",
 		Mode: "普通全日制",
