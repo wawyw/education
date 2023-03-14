@@ -17,6 +17,7 @@
             <div id="tableDiv">
                 <table id="table" style="margin: 0 auto;">
                     <tr>
+                        <td>学历认证时间</td>
                         <td>姓名</td>
                         <td>出生日期</td>
                         <td>身份证号</td>
@@ -28,6 +29,7 @@
                     </tr>
                     {{range .Edu.Historys}}
                         <tr>
+                            <td>{{.RegTime}}</td>
                             <td>{{.Education.Name}}</td>
                             <td>{{.Education.BirthDay}}</td>
                             <td>{{.Education.EntityID}}</td>

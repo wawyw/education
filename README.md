@@ -31,19 +31,30 @@ cd education && go mod tidy
 运行启动脚本
 
 ```
-./clean_docker.sh
+./start.sh
 ```
 
-在`127.0.0.1:9000`进行访问
+启动区块链浏览器(在另一终端执行)
+
+```
+cd fixtures/explorer
+./start.sh
+```
+
+关闭区块链浏览器
+
+```
+./stop.sh
+```
+
+项目主页：访问 localhost:9000
+
+区块链浏览器：访问 localhost:8080
 
 ## 停止项目
 
-```
-cd fixtures
-docker-compose down -v
-```
+education/下执行
 
-## 启动过程中的问题
-
-1. ... channel.tx:no such file
-   解决：export GOPATH=$(go env GOPATH)
+```
+./stop.sh
+```

@@ -13,7 +13,7 @@
         <div class="container flex">
             <div class="r-main">
                 <div class="b-head">
-                    <h4 class="main_title">基于区块链的学历证书可信认证系统</h4>
+                    <h4 class="main_title">基于区块链的学历证书可信认证系统&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong style="font-size:14px;"><a style="color:#337ab7" href="/loginout">退出</a></strong></h4>
                 </div>
                 <hr style="border-color:#00BAC7">
                 <p style="font-size:22px;margin-top:60px;margin-bottom:-15px">学历证书查询</p>
@@ -36,6 +36,19 @@
                         </div>
                         <div class="m_f_div_btn"><a href="/queryPage" class="btn_blue">查询</a> </div>
                     </div>
+                    {{if eq .CurrentUser.IsAdmin "T"}}
+                    <div class="m_f_div">
+                        <div class="qyecx-icon"></div>
+                        <h3>管理中心</h3>
+                        <div class="description">
+                            <p>
+                            添加学历信息
+                            </p>
+                        </div>
+                        <div class="m_f_div_btn"><a href="/help" class="btn_blue">进入</a></div>
+                    </div>
+                    {{end}}
+                    {{if eq .CurrentUser.IsAdmin "F"}}
                     <div class="m_f_div">
                         <div class="qyecx-icon"></div>
                         <h3>帮助中心</h3>
@@ -46,6 +59,7 @@
                         </div>
                         <div class="m_f_div_btn"><a href="/help" class="btn_blue">进入</a></div>
                     </div>
+                    {{end}}
                 </div>
             </div>
     </div>

@@ -1,12 +1,12 @@
 package main
 
 import (
-"github.com/hyperledger/fabric-chaincode-go/shim"
-"github.com/hyperledger/fabric-protos-go/peer"
-"fmt"
-"encoding/json"
-"bytes"
-
+	"github.com/hyperledger/fabric-chaincode-go/shim"
+	"github.com/hyperledger/fabric-protos-go/peer"
+	"fmt"
+	"encoding/json"
+	"bytes"
+	"time"
 )
 
 
@@ -38,6 +38,7 @@ type Education struct {
 type HistoryItem struct {
 	TxId	string
 	Education	Education
+	RegTime string
 }
 
 type EducationChaincode struct {
@@ -252,6 +253,7 @@ func (t *EducationChaincode) queryEduInfoByEntityID(stub shim.ChaincodeStubInter
 
 		var historyItem HistoryItem
 		historyItem.TxId = hisData.TxId
+		historyItem.RegTime = time.Now().Format("2006-01-02")
 		json.Unmarshal(hisData.Value, &hisEdu)
 
 		if hisData.Value == nil {
@@ -260,6 +262,7 @@ func (t *EducationChaincode) queryEduInfoByEntityID(stub shim.ChaincodeStubInter
 		}else {
 			historyItem.Education = hisEdu
 		}
+
 
 		historys = append(historys, historyItem)
 
@@ -360,4 +363,3 @@ func main(){
 		fmt.Printf("启动EducationChaincode时发生错误: %s", err)
 	}
 }
-

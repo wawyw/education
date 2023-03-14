@@ -38,6 +38,7 @@ Organizations:
             - Host: peer0.org1.example.com
               Port: 7051
 
+# 能力部分
 Capabilities:
     Channel: &ChannelCapabilities
         V2_0: true

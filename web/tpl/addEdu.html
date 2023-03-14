@@ -15,7 +15,7 @@
     <div class="queryResule">
         <h2>添加高等教育学历信息</h2>
         <div class="back">
-            <a href="/index">返回首页</a>
+            <a href="/index" style="text-decoration: none;">返回首页&nbsp;&nbsp;</a>
         </div>
         <form action="/addEdu" method="post" name="addForm">
           <div class="top">
@@ -29,19 +29,108 @@
                   <p>
                       <span>籍贯：</span>
                       <span>
-                        <input type="text" name="place" class="input_text" tabindex="1" onfocus="if(this.placeholder=='籍贯'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='籍贯';this.className ='input_text'}" accesskey="n" placeholder="籍贯" size="25" autocomplete="off">
+                        <select name="place" id="place" style="border:none">
+                            <option value="北京">北京</option>
+                            <option value="天津">天津</option>
+                            <option value="河北">河北</option>
+                            <option value="山西">山西</option>
+                            <option value="内蒙古">内蒙古</option>
+                            <option value="辽宁">辽宁</option>
+                            <option value="吉林">吉林</option>
+                            <option value="黑龙江">黑龙江</option>
+                            <option value="上海">上海</option>
+                            <option value="江苏">江苏</option>
+                            <option value="浙江">浙江</option>
+                            <option value="安徽">安徽</option>
+                            <option value="福建">福建</option>
+                            <option value="江西">江西</option>
+                            <option value="山东">山东</option>
+                            <option value="河南">河南</option>
+                            <option value="湖北">湖北</option>
+                            <option value="湖南">湖南</option>
+                            <option value="广东">广东</option>
+                            <option value="广西">广西</option>
+                            <option value="海南">海南</option>
+                            <option value="重庆">重庆</option>
+                            <option value="四川">四川</option>
+                            <option value="青海">青海</option>
+                            <option value="宁夏">宁夏</option>
+                            <option value="贵州">贵州</option>
+                            <option value="云南">云南</option>
+                            <option value="西藏">西藏</option>
+                            <option value="陕西">陕西</option>
+                            <option value="甘肃">甘肃</option>
+                            <option value="新疆">新疆</option>
+                        </select>
                       </span>
                   </p>
                   <p>
                       <span>民族：</span>
                       <span>
-                        <input type="text" name="nation" class="input_text" tabindex="1" onfocus="if(this.placeholder=='民族'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='民族';this.className ='input_text'}" accesskey="n" placeholder="民族" size="25" autocomplete="off">
+                        <select name="nation" style="border:none">
+                            <option value="汉族">汉族</option>
+                            <option value="蒙古族">蒙古族</option>
+                            <option value="回族">回族</option>
+                            <option value="藏族">藏族</option>
+                            <option value="维吾尔族">维吾尔族</option>
+                            <option value="苗族">苗族</option>
+                            <option value="彝族">彝族</option>
+                            <option value="壮族">壮族</option>
+                            <option value="布依族">布依族</option>
+                            <option value="朝鲜族">朝鲜族</option>
+                            <option value="满族">满族</option>
+                            <option value="侗族">侗族</option>
+                            <option value="瑶族">瑶族</option>
+                            <option value="白族">白族</option>
+                            <option value="土家族">土家族</option>
+                            <option value="哈尼族">哈尼族</option>
+                            <option value="哈萨克族">哈萨克族</option>
+                            <option value="傣族">傣族</option>
+                            <option value="黎族">黎族</option>
+                            <option value="傈僳族">傈僳族</option>
+                            <option value="佤族">佤族</option>
+                            <option value="畲族">畲族</option>
+                            <option value="高山族">高山族</option>
+                            <option value="拉祜族">拉祜族</option>
+                            <option value="水族">水族</option>
+                            <option value="东乡族">东乡族</option>
+                            <option value="纳西族">纳西族</option>
+                            <option value="景颇族">景颇族</option>
+                            <option value="柯尔克孜族">柯尔克孜族</option>
+                            <option value="土族">土族</option>
+                            <option value="达斡尔族">达斡尔族</option>
+                            <option value="仫佬族">仫佬族</option>
+                            <option value="羌族">羌族</option>
+                            <option value="布朗族">布朗族</option>
+                            <option value="撒拉族">撒拉族</option>
+                            <option value="毛南族">毛南族</option>
+                            <option value="仡佬族">仡佬族</option>
+                            <option value="锡伯族">锡伯族</option>
+                            <option value="阿昌族">阿昌族</option>
+                            <option value="普米族">普米族</option>
+                            <option value="塔吉克族">塔吉克族</option>
+                            <option value="怒族">怒族</option>
+                            <option value="乌孜别克族">乌孜别克族</option>
+                            <option value="俄罗斯族">俄罗斯族</option>
+                            <option value="鄂温克族">鄂温克族</option>
+                            <option value="德昂族">德昂族</option>
+                            <option value="保安族">保安族</option>
+                            <option value="裕固族">裕固族</option>
+                            <option value="京族">京族</option>
+                            <option value="塔塔尔族">塔塔尔族</option>
+                            <option value="独龙族">独龙族</option>
+                            <option value="鄂伦春族">鄂伦春族</option>
+                            <option value="赫哲族">赫哲族</option>
+                            <option value="门巴族">门巴族</option>
+                            <option value="珞巴族">珞巴族</option>
+                            <option value="基诺族">基诺族</option>
+                        </select>
                       </span>
                   </p>
                   <p>
                       <span>入学日期：</span>
                       <span>
-                        <input type="text" name="enrollDate" class="input_text" tabindex="1" onfocus="if(this.placeholder=='入学日期'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='入学日期';this.className ='input_text'}" accesskey="n" placeholder="入学日期" size="25" autocomplete="off">
+                        <input type="date" name="enrollDate" style="border:none">
                       </span>
                   </p>
                   <p>
@@ -51,21 +140,36 @@
                       </span>
                   </p>
                   <p>
-                      <span>学历类别：</span>
+                      <span>学历类型：</span>
                       <span>
-                        <input type="text" name="quaType" class="input_text" tabindex="1" onfocus="if(this.placeholder=='学历类别'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='学历类别';this.className ='input_text'}" accesskey="n" placeholder="学历类别" size="25" autocomplete="off">
+                        <select name="quaType" id="quaType" style="border:none">
+                            <option value="普通高等教育">普通高等教育</option>
+                            <option value="成人教育">成人教育</option>
+                        </select>
                       </span>
                   </p>
                   <p>
                       <span>层次：</span>
                       <span>
-                        <input type="text" name="level" class="input_text" tabindex="1" onfocus="if(this.placeholder=='层次'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='层次';this.className ='input_text'}" accesskey="n" placeholder="层次" size="25" autocomplete="off">
+                        <select name="level" id="level" style="border:none">
+                            <option value="本科">本科</option>
+                            <option value="硕士研究生">硕士研究生</option>
+                            <option value="博士研究生">博士研究生</option>                            
+                            <option value="小学">小学</option>
+                            <option value="初中">初中</option>
+                            <option value="中专/高中">中专/高中</option>
+                            <option value="专科">专科</option>
+                        </select>
                       </span>
                   </p>
                   <p>
                       <span>毕(结)业：</span>
                       <span>
-                        <input type="text" name="graduation" class="input_text" tabindex="1" onfocus="if(this.placeholder=='毕业/结业'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='毕业/结业';this.className ='input_text'}" accesskey="n" placeholder="毕业/结业" size="25" autocomplete="off">
+                        <select name="graduation" id="graduation" style="border:none">
+                            <option value="毕业">毕业</option>
+                            <option value="结业">结业</option>
+                            <option value="肄业">肄业</option>
+                        </select>
                       </span>
                   </p>
               </div>
@@ -73,13 +177,14 @@
                   <p>
                       <span>性别：</span>
                       <span>
-                        <input type="text" name="gender" class="input_text" tabindex="1" onfocus="if(this.placeholder=='性别'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='性别';this.className ='input_text'}" accesskey="n" placeholder="性别" size="25" autocomplete="off">
+                        <input type="radio" name="gender" value="男" id="nan"><label for="nan" style="background:url(../static/images/sex.jpg) no-repeat 4px 6px;background-position:6px 11px;padding-left:30px;height:32px;width:15px;">男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gender" value="女" id="nv"><label for="nv" style="background:url(../static/images/sex.jpg) no-repeat 4px 6px;background-position:6px -21px;padding-left:30px;height:32px;width:15px;">女</label>
                       </span>
                   </p>
                   <p>
                       <span>出生日期：</span>
                       <span>
-                        <input type="text" name="birthDay" class="input_text" tabindex="1" onfocus="if(this.placeholder=='出生日期'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='出生日期';this.className ='input_text'}" accesskey="n" placeholder="出生日期" size="25" autocomplete="off">
+                        <input type="date" name="birthDay" style="border:none">
                       </span>
                   </p>
                   <p>
@@ -91,7 +196,7 @@
                   <p>
                       <span>毕(结)业日期：</span>
                       <span>
-                        <input type="text" name="graduationDate" class="input_text" tabindex="1" onfocus="if(this.placeholder=='毕(结)业日期'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='毕(结)业日期';this.className ='input_text'}" accesskey="n" placeholder="毕(结)业日期" size="25" autocomplete="off">
+                        <input type="date" name="graduationDate" style="border:none">
                       </span>
                   </p>
                   <p>
@@ -103,13 +208,23 @@
                   <p>
                       <span>学习形式：</span>
                       <span>
-                        <input type="text" name="mode" class="input_text" tabindex="1" onfocus="if(this.placeholder=='学习形式'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='学习形式';this.className ='input_text'}" accesskey="n" placeholder="学习形式" size="25" autocomplete="off">
+                        <select name="mode" id="mode" style="border:none">
+                            <option value="普通全日制">普通全日制</option>
+                            <option value="成人教育">成人教育</option>
+                            <option value="自学考试">自学考试</option>
+                            <option value="网络教育">网络教育</option>
+                            <option value="其他">其他</option>
+                        </select>
                       </span>
                   </p>
                   <p>
                       <span>学制：</span>
                       <span>
-                        <input type="text" name="length" class="input_text" tabindex="1" onfocus="if(this.placeholder=='学制'){this.placeholder='';}this.className ='input_text input_text_focus'" onblur="if(this.value==''){this.placeholder='学制';this.className ='input_text'}" accesskey="n" placeholder="学制" size="25" autocomplete="off">
+                        <select name="length" id="length" style="border:none">
+                            <option value="四年">四年</option>
+                            <option value="三年">三年</option>
+                            <option value="五年">五年</option>
+                        </select>
                       </span>
                   </p>
                   <p>
@@ -123,13 +238,13 @@
             <div class="headImg">
                 <div class="uploadImg">
                     <input type="file" accept="image/*" name="" value="上传照片" id="file">
-                    <img src="/static/photo/upload.png" alt="">
+                    <img src="/static/photo/upload.png" style="position:relative;left:0px;top:-23px;">
                 </div>
                 <p>请上传照片</p>
             </div>      
           </div>
           <input type="hidden" name="photo" id="photo" value=""/>
-          <button type="button" name="button" class="btn">添加学历信息</button>
+          <button type="button" name="button" class="btn" style="margin-bottom:20px;margin-top:60px;">添加学历信息</button>
         </form>
     </div>
     <!-- data-backdrop="false"去除遮罩层  -->

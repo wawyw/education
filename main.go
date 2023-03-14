@@ -8,7 +8,6 @@ import (
 	"education/web"
 	"education/web/controller"
 	"os"
-
 )
 
 const (
@@ -65,24 +64,26 @@ func main() {
 	fmt.Println(">> 通过链码外部服务设置链码状态......")
 
 	edu := service.Education{
-		Name: "张三",
+		Name: "李雷",
 		Gender: "男",
-		Nation: "汉",
-		EntityID: "101",
+		Nation: "汉族",
+		EntityID: "610101200001010001",
 		Place: "陕西",
-		BirthDay: "2000年01月01日",
-		EnrollDate: "2018年9月",
-		GraduationDate: "2022年7月",
+		BirthDay: "2000-01-01",
+		EnrollDate: "2018-09-01",
+		GraduationDate: "2022-07-01",
 		SchoolName: "西安邮电大学",
 		Major: "信息安全",
-		QuaType: "普通",
+		QuaType: "普通高等教育",
 		Length: "四年",
 		Mode: "普通全日制",
 		Level: "本科",
 		Graduation: "毕业",
-		CertNo: "201",
+		CertNo: "10001",
 		Photo: "/static/photo/01.png",
 	}
+
+
 
 	serviceSetup, err := service.InitService(info.ChaincodeID, info.ChannelID, info.Orgs[0], sdk)
 	if err!=nil{
@@ -96,7 +97,7 @@ func main() {
 		fmt.Println("信息发布成功, 交易编号为: " + msg)
 	}
 
-	result, err := serviceSetup.FindEduInfoByEntityID("101")
+	result, err := serviceSetup.FindEduInfoByEntityID("610101200001010001")
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {

@@ -37,6 +37,7 @@ type Education struct {
 type HistoryItem struct {
 	TxId	string
 	Education	Education
+	RegTime string
 }
 
 type ServiceSetup struct {

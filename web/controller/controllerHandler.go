@@ -1,5 +1,3 @@
-
-
 package controller
 
 import (
@@ -12,12 +10,16 @@ import (
 var cuser User
 
 func (app *Application) LoginView(w http.ResponseWriter, r *http.Request)  {
-
 	ShowView(w, r, "login.html", nil)
 }
 
 func (app *Application) Index(w http.ResponseWriter, r *http.Request)  {
-	ShowView(w, r, "index.html", nil)
+	data := &struct {
+		CurrentUser User
+	}{
+		CurrentUser:cuser,
+	}
+	ShowView(w, r, "index.html", data)
 }
 
 func (app *Application) Help(w http.ResponseWriter, r *http.Request)  {

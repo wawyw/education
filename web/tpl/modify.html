@@ -126,10 +126,10 @@
 
             <div class="headImg">
                 <div class="uploadImg">
-                    <input type="file" name="photo" id="file">
-                    <img src="{{.Edu.Photo}}" alt="">
+                    <input type="file" accept="image/*" name="" id="file">
+                    <img src="{{.Edu.Photo}}" style="position:relative;left:0px;top:-23px;">
                 </div>
-                <p>上传照片</p>
+                <p>请上传照片</p>
             </div>
         </div>
         <input type="hidden" name="photo" id="photo" value="{{.Edu.Photo}}"/>
